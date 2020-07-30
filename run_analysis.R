@@ -54,9 +54,9 @@ names(setactnames)<-gsub("gravity", "Gravity", names(setactnames))
 
 #Final Nice and Tidy Data with means
 FinalData <- setactnames %>%
-  group_by(subject, activity) %>%
+  group_by(subject, activitytype) %>%
   summarise_all(funs(mean))
-write.table(FinalData, "FinalData.txt", row.name=FALSE)
+write.table(FinalData, "FinalData2.txt", row.name=FALSE)
 
 
 
